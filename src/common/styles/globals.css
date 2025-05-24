@@ -148,34 +148,6 @@ body {
   .input {
     @apply !w-full !border-black !bg-white focus-visible:!border-black focus-visible:!ring-0;
   }
-
-  .companion-section {
-    @apply flex w-2/3 flex-col items-center justify-center gap-4 rounded-lg border-2 border-orange-500 max-sm:w-full;
-  }
-  .companion-avatar {
-    @apply mt-4 flex size-[300px] items-center justify-center rounded-lg max-sm:size-[100px];
-  }
-  .companion-lottie {
-    @apply size-[300px] max-sm:size-[100px];
-  }
-  .user-section {
-    @apply flex w-1/3 flex-col gap-4 max-sm:w-full max-sm:flex-row;
-  }
-  .user-avatar {
-    @apply flex flex-col items-center gap-4 rounded-lg border-2 border-black py-8 max-sm:hidden;
-  }
-  .btn-mic {
-    @apply flex w-full cursor-pointer flex-col items-center gap-2 rounded-lg border-2 border-black py-8 max-sm:py-2;
-  }
-  .transcript {
-    @apply relative flex w-full flex-grow flex-col items-center gap-4 overflow-hidden pt-10;
-  }
-  .transcript-message {
-    @apply flex h-full w-full flex-col gap-4 overflow-y-auto pr-2 text-2xl max-sm:gap-2;
-  }
-  .transcript-fade {
-    @apply from-background via-background/90 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-40 bg-gradient-to-t to-transparent max-sm:h-20;
-  }
 }
 
 @layer utilities {

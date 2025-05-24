@@ -1,13 +1,13 @@
 enum Subject {
-  maths = 'maths',
-  language = 'language',
-  science = 'science',
-  history = 'history',
-  coding = 'coding',
-  geography = 'geography',
-  economics = 'economics',
-  finance = 'finance',
-  business = 'business',
+  maths = '数学',
+  language = '语文',
+  science = '科学',
+  history = '历史',
+  coding = '编程',
+  geography = '地理',
+  economics = '经济学',
+  finance = '金融',
+  business = '商业',
 }
 
 type Companion = Models.DocumentList<Models.Document> & {

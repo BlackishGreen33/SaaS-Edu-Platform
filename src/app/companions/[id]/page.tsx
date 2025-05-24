@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
-// import CompanionComponent from '@/components/CompanionComponent';
+import { CompanionComponent } from '@/common/components/companion';
 import { getCompanion } from '@/common/libs/actions/companion.actions';
 import { getSubjectColor } from '@/common/utils';
 
@@ -49,12 +49,12 @@ const Page: NextPage<CompanionSessionPageProps> = async ({ params }) => {
           {duration} 分钟
         </div>
       </article>
-      {/* <CompanionComponent
+      <CompanionComponent
         {...companion}
         companionId={id}
         userName={user.firstName!}
         userImage={user.imageUrl!}
-      /> */}
+      />
     </main>
   );
 };
