@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
-import CompanionForm from '@/common/components/companion/CompanionForm';
+import { CompanionForm } from '@/common/components/companion';
 import { newCompanionPermissions } from '@/common/libs/actions/companion.actions';
 
 const Page: NextPage = async () => {

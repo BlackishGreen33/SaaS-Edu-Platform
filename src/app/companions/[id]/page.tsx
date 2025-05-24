@@ -24,7 +24,7 @@ const Page: NextPage<CompanionSessionPageProps> = async ({ params }) => {
 
   return (
     <main>
-      <article className="rounded-border flex justify-between p-6 max-md:flex-col">
+      <article className="flex justify-between rounded-4xl border border-black p-6 max-md:flex-col">
         <div className="flex items-center gap-2">
           <div
             className="flex size-[72px] items-center justify-center rounded-lg max-md:hidden"

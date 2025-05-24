@@ -149,15 +149,6 @@ body {
     @apply !w-full !border-black !bg-white focus-visible:!border-black focus-visible:!ring-0;
   }
 
-  .companions-grid {
-    @apply flex w-full flex-wrap justify-between gap-4 max-md:justify-center;
-  }
-  .rounded-border {
-    @apply rounded-4xl border border-black;
-  }
-  .companion-list {
-    @apply rounded-4xl border border-black bg-white px-7 pt-7 pb-10 max-lg:w-full;
-  }
   .companion-section {
     @apply flex w-2/3 flex-col items-center justify-center gap-4 rounded-lg border-2 border-orange-500 max-sm:w-full;
   }

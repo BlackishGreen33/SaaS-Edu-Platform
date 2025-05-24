@@ -23,7 +23,12 @@ const CompanionsList: React.FC<CompanionsListProps> = ({
   classNames,
 }) => {
   return (
-    <article className={cn('companion-list', classNames)}>
+    <article
+      className={cn(
+        'rounded-4xl border border-black bg-white px-7 pt-7 pb-10 max-lg:w-full',
+        classNames
+      )}
+    >
       <h2 className="text-3xl font-bold">{title}</h2>
       <Table>
         <TableHeader>

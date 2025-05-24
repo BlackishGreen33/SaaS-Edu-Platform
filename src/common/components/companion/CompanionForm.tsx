@@ -27,15 +27,15 @@ import { subjects } from '@/common/constants';
 import { createCompanion } from '@/common/libs/actions/companion.actions';
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: 'Companion is required.' }),
-  subject: z.string().min(1, { message: 'Subject is required.' }),
-  topic: z.string().min(1, { message: 'Topic is required.' }),
-  voice: z.string().min(1, { message: 'Voice is required.' }),
-  style: z.string().min(1, { message: 'Style is required.' }),
-  duration: z.coerce.number().min(1, { message: 'Duration is required.' }),
+  name: z.string().min(1, { message: '伙伴名称为必填项！' }),
+  subject: z.string().min(1, { message: '主题为必填项！' }),
+  topic: z.string().min(1, { message: '内容为必填项！' }),
+  voice: z.string().min(1, { message: '声音为必填项！' }),
+  style: z.string().min(1, { message: '风格为必填项！' }),
+  duration: z.coerce.number().min(1, { message: '时长为必填项！' }),
 });
 
-const CompanionForm = () => {
+const CompanionForm: React.FC = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -53,7 +53,7 @@ const CompanionForm = () => {
     if (companion) {
       redirect(`/companions/${companion.id}`);
     } else {
-      console.log('Failed to create a companion');
+      console.error('Failed to create a companion!');
       redirect('/');
     }
   };
