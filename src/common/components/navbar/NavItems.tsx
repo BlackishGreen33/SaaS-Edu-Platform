@@ -11,7 +11,7 @@ const navItems = [
   { label: '我的旅程', href: 'my-journey' },
 ];
 
-const NavItems = () => {
+const NavItems: React.FC = () => {
   const pathname = usePathname();
 
   return (
