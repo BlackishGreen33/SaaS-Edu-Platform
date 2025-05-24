@@ -16,6 +16,9 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: ['.next/**'],
+  },
   ...compat.config({
     env: {
       browser: true,
