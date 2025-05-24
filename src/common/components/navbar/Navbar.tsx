@@ -1,4 +1,4 @@
-// import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,16 +13,16 @@ const Navbar: React.FC = () => (
     </Link>
     <div className="flex items-center gap-8">
       <NavItems />
-      {/* <SignedOut>
-          <SignInButton>
-            <button className="flex cursor-pointer items-center gap-2 rounded-4xl border border-black px-4 py-2.5 text-sm font-semibold">
-              Sign In
-            </button>
-          </SignInButton>
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn> */}
+      <SignedOut>
+        <SignInButton>
+          <button className="flex cursor-pointer items-center gap-2 rounded-4xl border border-black px-4 py-2.5 text-sm font-semibold">
+            登录
+          </button>
+        </SignInButton>
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
     </div>
   </nav>
 );
