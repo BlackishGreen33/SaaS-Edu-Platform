@@ -39,7 +39,7 @@ const SubjectFilter: React.FC = () => {
   return (
     <Select onValueChange={setSubject} value={subject}>
       <SelectTrigger className="input capitalize">
-        <SelectValue placeholder="Subject" />
+        <SelectValue placeholder="主題" />
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="all">所有主题</SelectItem>

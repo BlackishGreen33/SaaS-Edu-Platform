@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,12 +12,16 @@ const Cta: React.FC = () => (
     <h2 className="text-3xl font-bold">构建和个性化学习伙伴</h2>
     <p>选择一个名字，科目，声音，和个性，开始通过自然和有趣的语音对话学习。</p>
     <Image src="images/cta.svg" alt="cta" width={362} height={232} />
-    <button className="btn-primary">
+    <motion.button
+      whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 1.05 }}
+      className="btn-primary"
+    >
       <Image src="/icons/plus.svg" alt="plus" width={12} height={12} />
       <Link href="/companions/new">
         <p>构建新伙伴</p>
       </Link>
-    </button>
+    </motion.button>
   </section>
 );
 

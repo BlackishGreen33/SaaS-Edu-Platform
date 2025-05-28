@@ -30,6 +30,7 @@ const Page: NextPage = async () => {
       <section className="flex items-center justify-between gap-4 max-sm:flex-col">
         <div className="flex items-center gap-4">
           <Image
+            className="rounded-full"
             src={user.imageUrl}
             alt={user.firstName!}
             width={110}
@@ -45,7 +46,7 @@ const Page: NextPage = async () => {
           </div>
         </div>
         <div className="flex gap-4">
-          <div className="rouded-lg flex h-fit flex-col gap-2 border border-black p-3">
+          <div className="flex h-fit flex-col gap-2 rounded-2xl border border-black p-3">
             <div className="flex items-center gap-2">
               <Image
                 src="/icons/check.svg"
@@ -57,7 +58,7 @@ const Page: NextPage = async () => {
             </div>
             <div>完成的课程数</div>
           </div>
-          <div className="rouded-lg flex h-fit flex-col gap-2 border border-black p-3">
+          <div className="flex h-fit flex-col gap-2 rounded-2xl border border-black p-3">
             <div className="flex items-center gap-2">
               <Image src="/icons/cap.svg" alt="cap" width={22} height={22} />
               <p className="text-2xl font-bold">{companions.length}</p>
@@ -70,11 +71,12 @@ const Page: NextPage = async () => {
         <AccordionItem value="bookmarks">
           <AccordionTrigger className="text-2xl font-bold">
             {/* Bookmarked Companions {`(${bookmarkedCompanions.length})`} */}
+            学习伙伴书签
           </AccordionTrigger>
           <AccordionContent>
             <CompanionsList
               // companions={bookmarkedCompanions}
-              title="Bookmarked Companions"
+              title="学习伙伴书签"
             />
           </AccordionContent>
         </AccordionItem>

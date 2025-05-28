@@ -1,6 +1,7 @@
 'use client';
 
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import * as React from 'react';
 
@@ -177,7 +178,9 @@ const CompanionComponent: React.FC<CompanionComponentProps> = ({
               {isMuted ? '开启麦克风' : '关闭麦克风'}
             </p>
           </button>
-          <button
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.01 }}
             className={cn(
               'w-full cursor-pointer rounded-lg py-2 text-white transition-colors',
               callStatus === CallStatus.ACTIVE ? 'bg-red-700' : 'bg-primary',
@@ -192,7 +195,7 @@ const CompanionComponent: React.FC<CompanionComponentProps> = ({
               : callStatus === CallStatus.CONNECTING
                 ? '连接中'
                 : '开始对话'}
-          </button>
+          </motion.button>
         </div>
       </section>
       <section className="relative flex w-full flex-grow flex-col items-center gap-4 overflow-hidden pt-10">

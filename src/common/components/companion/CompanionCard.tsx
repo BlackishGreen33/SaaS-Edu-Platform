@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -71,9 +72,13 @@ const CompanionCard: React.FC<CompanionCardProps> = ({
         <p className="text-sm">{duration} 分钟</p>
       </div>
       <Link href={`/companions/${id}`} className="w-full">
-        <button className="bg-primary flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 text-white">
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.01 }}
+          className="bg-primary flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 text-white"
+        >
           开始课程
-        </button>
+        </motion.button>
       </Link>
     </article>
   );
